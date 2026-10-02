@@ -438,3 +438,174 @@ Segment objects are essentially key-value pairs that convey specific units of da
 | name | string | Optional | - | Name of the data segment specific to the data provider. |
 | value | string | Optional | - | String representation of the data segment value. |
 | ext | object | Optional | - | Placeholder for exchange-specific extensions to OpenRTB. |
+
+## Sample
+
+### Banner
+
+```json
+{
+  "id": "4b64365402e54e0869e1d39c2ee4c432",
+  "imp": [
+    {
+      "id": "06a5f7ca-0f13-4ae1-6a6e-15ffef02c650",
+      "banner": { "w": 320, "h": 50 },
+      "bidfloor": 0.1,
+      "bidfloorcur": "USD",
+      "tagid": "1",
+      "displaymanager": "Admize",
+      "displaymanagerver": "1.0.0"
+    }
+  ],
+  "app": {
+    "id": "1.5.kr.co.psynet",
+    "name": "LIVE스코어",
+    "bundle": "kr.co.psynet",
+    "storeurl": "https://play.google.com/store/apps/details?id=kr.co.psynet",
+    "publisher": {
+      "id": "538c9315-0a99-45b9-b0ec-785a0ad541e0",
+      "name": "AdmizeSSP"
+    }
+  },
+  "device": {
+    "ifa": "638343a6-e910-4f33-b836-000de74b4c18",
+    "dnt": 0,
+    "lmt": 0,
+    "ua": "Mozilla/5.0 (Linux; Android 5.1.1; SM-N910P Build/LMY47X; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/55.0.2883.91 Mobile Safari/537.36",
+    "ip": "73.94.129.148",
+    "geo": {
+      "lat": 45.2874,
+      "lon": -93.4336,
+      "country": "USA",
+      "region": "MN",
+      "city": "Anoka",
+      "zip": "55303",
+      "type": 2
+    },
+    "carrier": "Comcast Cable",
+    "language": "en",
+    "make": "samsung",
+    "model": "SM-N910P",
+    "os": "Android",
+    "osv": "5.1.1",
+    "connectiontype": 2,
+    "devicetype": 1
+  },
+  "at": 2,
+  "tmax": 100,
+  "allimps": 0,
+  "cur": ["USD"],
+  "bcat": ["IAB13", "IAB14"],
+  "bapp": ["com.foo.test1", "io.testssp.testapp"],
+  "source": {
+    "ext": {
+      "schain": {
+        "ver": "1.0",
+        "complete": 0,
+        "nodes": [
+          {
+            "asi": "admize.io",
+            "sid": "p_1875135558794156",
+            "hp": 1,
+            "rid": "12d5e9a2-a54a-4d72-9045-c75733011621"
+          }
+        ]
+      }
+    }
+  }
+}
+```
+
+### Video
+
+```json
+{
+  "id": "7c1f2a9e3b8d4e6fa0b5c2d9e8f71a34",
+  "imp": [
+    {
+      "id": "2f6b9c1e-4a7d-4c3e-9b8a-5d1e7f2a6c90",
+      "video": {
+        "mimes": ["video/mp4"],
+        "minduration": 5,
+        "maxduration": 30,
+        "protocols": [2],
+        "w": 320,
+        "h": 480,
+        "startdelay": 0,
+        "placement": 5,
+        "linearity": 1,
+        "skip": 1,
+        "playbackmethod": [2, 4],
+        "playbackend": 1,
+        "delivery": [2],
+        "companiontype": [1, 2, 3],
+        "ext": {
+          "rewarded": 0
+        }
+      },
+      "instl": 0,
+      "bidfloor": 0.1,
+      "bidfloorcur": "USD",
+      "tagid": "1",
+      "displaymanager": "Admize",
+      "displaymanagerver": "1.0.0"
+    }
+  ],
+  "app": {
+    "id": "1.5.kr.co.psynet",
+    "name": "LIVE스코어",
+    "bundle": "kr.co.psynet",
+    "storeurl": "https://play.google.com/store/apps/details?id=kr.co.psynet",
+    "publisher": {
+      "id": "538c9315-0a99-45b9-b0ec-785a0ad541e0",
+      "name": "AdmizeSSP"
+    }
+  },
+  "device": {
+    "ifa": "638343a6-e910-4f33-b836-000de74b4c18",
+    "dnt": 0,
+    "lmt": 0,
+    "ua": "Mozilla/5.0 (Linux; Android 5.1.1; SM-N910P Build/LMY47X; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/55.0.2883.91 Mobile Safari/537.36",
+    "ip": "73.94.129.148",
+    "geo": {
+      "lat": 45.2874,
+      "lon": -93.4336,
+      "country": "USA",
+      "region": "MN",
+      "city": "Anoka",
+      "zip": "55303",
+      "type": 2
+    },
+    "carrier": "Comcast Cable",
+    "language": "en",
+    "make": "samsung",
+    "model": "SM-N910P",
+    "os": "Android",
+    "osv": "5.1.1",
+    "connectiontype": 2,
+    "devicetype": 1
+  },
+  "at": 2,
+  "tmax": 100,
+  "allimps": 0,
+  "cur": ["USD"],
+  "bcat": ["IAB13", "IAB14"],
+  "bapp": ["com.foo.test1", "io.testssp.testapp"],
+  "source": {
+    "ext": {
+      "schain": {
+        "ver": "1.0",
+        "complete": 0,
+        "nodes": [
+          {
+            "asi": "admize.io",
+            "sid": "p_1875135558794156",
+            "hp": 1,
+            "rid": "7c1f2a9e3b8d4e6fa0b5c2d9e8f71a34"
+          }
+        ]
+      }
+    }
+  }
+}
+```

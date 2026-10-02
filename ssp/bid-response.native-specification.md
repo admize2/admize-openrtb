@@ -177,3 +177,34 @@ The event trackers response is an array of objects and specifies the types of ev
 |----|------|------------------|-------------|
 | 1 | img |  | Image-pixel tracking - URL provided will be inserted as a 1x1 pixel at the time of the event |
 | 2 | js | Not Supported |  |
+
+## Sample
+
+### Native
+```json
+{
+  "id": "4b6436abc2e54e0869e1d39c2ee4c432",
+  "bidid": "b-4b6436abc2e5-0001",
+  "cur": "USD",
+  "seatbid": [
+    {
+      "seat": "seat-1",
+      "bid": [
+        {
+          "id": "bid-16abc7ca-0001",
+          "impid": "16abc7ca-0f13-4ae1-6a6e-15ffabec0650",
+          "price": 0.15,
+          "nurl": "https://win.dsp.example.com/win?bid=bid-16abc7ca-0001&price=${AUCTION_PRICE}",
+          "lurl": "https://win.dsp.example.com/loss?bid=bid-16abc7ca-0001&reason=${AUCTION_LOSS}",
+          "adm": "{\"ver\":\"1.2\",\"assets\":[{\"id\":1,\"data\":{\"value\":\"더 알아보기\"}},{\"id\":2,\"title\":{\"text\":\"테스트-타이틀\"}},{\"id\":3,\"img\":{\"url\":\"https://cdn.dsp.example.com/icon/80x80.jpg\",\"w\":80,\"h\":80}},{\"id\":4,\"img\":{\"url\":\"https://cdn.dsp.example.com/main/1200x627.jpg\",\"w\":1200,\"h\":627}}],\"link\":{\"url\":\"https://www.example.com/landing\",\"clicktrackers\":[\"https://track.dsp.example.com/click?bid=bid-16abc7ca-0001\"]},\"imptrackers\":[\"https://track.dsp.example.com/imp?bid=bid-16abc7ca-0001&price=${AUCTION_PRICE}\"]}",
+          "adid": "ad-1001",
+          "adomain": ["example.com"],
+          "cid": "cmp-2001",
+          "crid": "cr-3001",
+          "cat": ["IAB9"]
+        }
+      ]
+    }
+  ]
+}
+```

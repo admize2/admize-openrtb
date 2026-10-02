@@ -87,3 +87,71 @@ Macros that can be used in URLs for tracking and reporting.
 | ${AUCTION_CURRENCY} | The currency used in the bid (explicit or implied); for confirmation only |
 | ${AUCTION_PRICE} | Clearing price using the same currency and units as the bid |
 | ${AUCTION_PRICE:B64} | Base64 encoded clearing price |
+
+## Sample
+
+### Banner
+```json
+{
+  "id": "4b64365402e54e0869e1d39c2ee4c432",
+  "seatbid": [
+    {
+      "bid": [
+        {
+          "id": "1-1644894781441-161-23-2446841",
+          "impid": "06a5f7ca-0f13-4ae1-6a6e-15ffef02c650",
+          "price": 0.3068,
+          "adid": "495E8194:1644894781:0363905980",
+          "adm": "<!doctype html>\n<html>\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no\">\n  <link rel=\"icon\" href=\"data:,\">\n  <style>\n    BODY {\n      margin: 0;\n      padding: 0;\n    }\n    .container {\n      width: 100%;\n      height: 100%;\n    }\n    .block {\n      width: 320px;\n      height: 50px;\n      margin: 0 auto;\n      overflow: hidden;\n    }\n  </style>\n</head>\n<body>\n<div class=\"container\">\n  <div class=\"block\">\n    <iframe id=\"Admize_area\" name=\"Admize_area\" style=\"width:320px; height:50px; margin:0px; padding:0px; border: none;\"></iframe>\n  </div>\n</div>\n<script>\n  let decode = function(input) {\n    input = input.replace(/-/g, '+').replace(/_/g, '/');\n    let pad = input.length % 4;\n    if (pad) {\n      if (pad === 1) {\n        throw new Error('InvalidLengthError: Input base64url string is the wrong length to determine padding');\n      }\n      input += new Array(5 - pad).join('=');\n    }\n    return input;\n  };\n  let adm = 'CjxodG1sPjxoZWFkPjxtZXRhIGh0dHAtZXF1aXY9IkNvbnRlbnQtVHlwZSIgY29udGVudD0idGV4dC9odG1sOyBjaGFyc2V0PVVURi04Ij4KCiAgICAKICAgIDxtZXRhIGlkPSJ2cCIgbmFtZT0idmlld3BvcnQiIGNvbnRlbnQ9IiI-Cgo8bGluayB0eXBlPSJ0ZXh0L2NzcyIgcmVsPSJzdHlsZXNoZWV0IiBocmVmPSJodHRwczovL2ltYWdlLmNhdWx5LmNvLmtyL3JpY2hhZC90ZXN0L2NoYW5nanUvb3B0b3V0L2Nfb3B0b3V0LmNzcyIgPgoKPHNjcmlwdCBzcmM9Imh0dHBzOi8vYWpheC5nb29nbGVhcGlzLmNvbS9hamF4L2xpYnMvanF1ZXJ5LzEuMTEuMi9qcXVlcnkubWluLmpzIj48L3NjcmlwdD4KPHNjcmlwdCBpZD0iY19vcHRvdXQiIHNyYz0iaHR0cDovL2ltYWdlLmNhdWx5LmNvLmtyL29wdG91dC9jX29wdG91dC5qcz9hZGlkPTYzODM0M2E2LWU5MTAtNGYzMy1iODM2LTAwMGRlNzRiNGMxOCZwbGF0Zm9ybWNkPTImYWRjZD00NTQ2NTEiPjwvc2NyaXB0PiAKPGRpdiBzdHlsZT0icG9zaXRpb246IHJlbGF0aXZlOyI-Cgk8YSBocmVmPSJodHRwOi8vdWF0LWNsaWNrLmZzbnN5cy5jb20vQ2F1bHlDbGljaz9zZGtfdHlwZT1uYXRpdmUmY29kZT1UUW53N0NqOSZpZD00NTQ2NTYmdmVyc2lvbj01LjEuMSZzZGtfdmVyc2lvbj00LjUuMSZwbGF0Zm9ybT1BbmRyb2lkJnNjb2RlPTYzODM0M2E2LWU5MTAtNGYzMy1iODM2LTAwMGRlNzRiNGMxOCZpc2VyaWFsPTQ5NUU4MTk0OjE2NDQ4OTQ3ODE6MDM2MzgwNTk3MCZhZF9mb3JtPWJhbm5lciZuZXR3b3JrPVdJRkkmcGF5X3R5cGU9Y3BjJnRhcmdldF91cmw9aHR0cCUzQSUyRiUyRnVhdC1jbGljay5mc25zeXMuY29tJTJGQ2F1bHlDbGljayUzRnNka190eXBlJTNEbmF0aXZlJTI2Y29kZSUzRFRRbnc3Q2o5JTI2aWQlM0Q0NTQ2NTYlMjZ2ZXJzaW9uJTNENS4xLjElMjZzZGtfdmVyc2lvbiUzRDQuNS4xJTI2cGxhdGZvcm0lM0RBbmRyb2lkJTI2c2NvZGUlM0Q2MzgzNDNhNi1lOTEwLTRmMzMtYjgzNi0wMDBkZTc0YjRjMTglMjZpc2VyaWFsJTNENDk1RTgxOTQlM0ExNjQ0ODk0NzgxJTNBMDM2MzgwNTk3MCUyNmFkX2Zvcm0lM0RiYW5uZXIlMjZuZXR3b3JrJTNEV0lGSSUyNnBheV90eXBlJTNEY3BjJTI2dGFyZ2V0X3VybCUzRGh0dHBzJTI1M0ElMjUyRiUyNTJGd3d3LmV4YW1wbGUuY29tJTI1MkYlMjZjbGlja19hY3Rpb25fcGFyYW0xJTNEaHR0cHMlMjUzQSUyNTJGJTI1MkZ3d3cuZXhhbXBsZS5jb20lMjUyRiUyNmNfY29udHJvbCUzRGwmY2xpY2tfYWN0aW9uX3BhcmFtMT1odHRwJTNBJTJGJTJGdWF0LWNsaWNrLmZzbnN5cy5jb20lMkZDYXVseUNsaWNrJTNGc2RrX3R5cGUlM0RuYXRpdmUlMjZjb2RlJTNEVFFudzdDajklMjZpZCUzRDQ1NDY1NiUyNnZlcnNpb24lM0Q1LjEuMSUyNnNka192ZXJzaW9uJTNENC41LjElMjZwbGF0Zm9ybSUzREFuZHJvaWQlMjZzY29kZSUzRDYzODM0M2E2LWU5MTAtNGYzMy1iODM2LTAwMGRlNzRiNGMxOCUyNmlzZXJpYWwlM0Q0OTVFODE5NCUzQTE2NDQ4OTQ3ODElM0EwMzYzODA1OTcwJTI2YWRfZm9ybSUzRGJhbm5lciUyNm5ldHdvcmslM0RXSUZJJTI2cGF5X3R5cGUlM0RjcGMlMjZ0YXJnZXRfdXJsJTNEaHR0cHMlMjUzQSUyNTJGJTI1MkZ3d3cuZXhhbXBsZS5jb20lMjUyRiUyNmNsaWNrX2FjdGlvbl9wYXJhbTElM0RodHRwcyUyNTNBJTI1MkYlMjUyRnd3dy5leGFtcGxlLmNvbSUyNTJGJTI2Y19jb250cm9sJTNEbCIgdGFyZ2V0PSJfYmxhbmsiPgoJCTxpbWcgc3R5bGU9ImJvcmRlcjogMDsiIGJvcmRlcj0iMCIgd2lkdGg9IjMyMCIgaGVpZ2h0PSI1MCIgc3JjPSJodHRwOi8vY2F1bHkxNDIuZnNuc3lzLmNvbS9pY29uLzIwMjEvMDQvNTRhZGMxZmIxZGRhNGM2M2FjNzA4OGViMDQ5ZjA3YzJfMTY3MDQuanBnIiBhbHQ9IiI-PC9pbWc-Cgk8L2E-Cgk8aW1nIHN0eWxlPSJib3JkZXI6IDA7IiBib3JkZXI9IjAiIHdpZHRoPSIwIiBoZWlnaHQ9IjAiIHNyYz0iaHR0cDovL2NhdWx5MTQxLmZzbnN5cy5jb206MTI0NDgvY2F1bHlEc3BJbmZvcm0_c2RrX3R5cGU9bmF0aXZlJmFkc19jZD00NTQ2NTYmdmVyc2lvbj01LjEuMSZzZGtfdmVyc2lvbj00LjUuMSZwbGF0Zm9ybT1BbmRyb2lkJmNvZGU9VFFudzdDajkmbW9kZWw9YW5kcm9pZCZzY29kZT02MzgzNDNhNi1lOTEwLTRmMzMtYjgzNi0wMDBkZTc0YjRjMTgmc2NvZGVfdHlwZT1naWQmYWRfc2hhcGU9YmFubmVyJmFkX2Zvcm09YmFubmVyJmlzZXJpYWw9NDk1RTgxOTQlM0ExNjQ0ODk0NzgxJTNBMDM2MzgwNTk3MCZ2aXNpYmxlPVkmcGFrZXk9JmJpZF9mbG9vcj0wLjEzJnByaWNlPTAuMzQ0NSZ1c2VfYnVybD1OJmF1Y3Rpb25fcHJpY2U9MC40MzgyJmF1Y3Rpb25pZD0xLTE2NDQ4OTQ3ODE0NDEtMTYxLTIzLTI0NDY4NDEiIGFsdD0iIi8-Cgk8c3BhbiBzdHlsZT0icG9zaXRpb246YWJzb2x1dGU7IGxlZnQ6MzA1cHg7Ij4KCQk8ZGl2IGNsYXNzPSJvcHQtb3V0Ij4gCgkJCTxkaXYgY2xhc3M9ImNpcmNsZSIgPgoJCQk8L2Rpdj4gCgkJCTxkaXYgY2xhc3M9ImJhciIgc3R5bGU9ImRpc3BsYXk6IGJsb2NrOyB3aWR0aDogNTRweDsgZGlzcGxheTogbm9uZTsiPgoJCQkJPGltZyBzcmM9Imh0dHBzOi8vaW1hZ2UuY2F1bHkuY28ua3Ivb3B0b3V0L2NhdWx5X2Iuc3ZnIiBhbHQ9IiI-CgkJCTwvZGl2PiAKCQkJPGRpdiBjbGFzcz0iZG90IiA-CgkJCTwvZGl2PgoJCQk8ZGl2IGNsYXNzPSJsaW5lIiA-CgkJCTwvZGl2PgoJCTwvZGl2PgoJPC9zcGFuPgo8L2Rpdj4KPC9odG1sPgo';\n  let doc = document.getElementById('Admize_area').contentWindow.document;\n  doc.open();\n  doc.write('<meta charset=\"utf-8\"><meta name=\"viewport\" content=\"width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no\">' + decodeURIComponent(escape(window.atob(decode(adm)))));\n  let style = document.createElement('style');\n  style.textContent = 'body {margin:0;padding:0}';\n  doc.head.appendChild(style);\n</script>\n<script>\n  function changeParameter(sourceUrl, targetParam, replace) {\n    let index = sourceUrl.indexOf(targetParam);\n    let changedUrl = \"\";\n    if (index >= 0) {\n      let lastIndex = sourceUrl.indexOf(\"&\", index + targetParam.length);\n      if (lastIndex >= 0) {\n        changedUrl = sourceUrl.substring(0, index) + replace + sourceUrl.substring(lastIndex);\n      } else {\n        changedUrl = sourceUrl.substring(0, index) + replace;\n      }\n    } else {\n      changedUrl = sourceUrl + \"&\" + replace;\n    }\n    return changedUrl;\n  }\n\n  function sendBeacon(url, param1, param2) {\n    let beaconUrl = changeParameter(url, param1, param2);\n    let beacon = document.createElement(\"img\");\n    beacon.style[\"display\"] = \"none\";\n    beacon.src = beaconUrl;\n    document.getElementsByTagName(\"BODY\")[0].appendChild(beacon);\n  }\n\n  function createBeacon(impUrl) {\n    sendBeacon(impUrl, \"inform_type=\", \"inform_type=\");\n    let intervalFlag = false;\n    if (intervalFlag == false) {\n      let intervalValue = setInterval(function() {\n        if (window.innerWidth > 0) {\n          sendBeacon(impUrl, \"inform_type=\", \"inform_type=cn\");\n          setTimeout(function() {\n            sendBeacon(impUrl, \"inform_type=\", \"inform_type=cy\");\n          }, 1000);\n          clearInterval(intervalValue);\n        }\n        intervalFlag = true;\n      }, 300);\n    }\n  }\n\n  createBeacon('https://test-event.admize.io/imp/ssp/v1/1-1644894781441-161-23-2446841?ap=${AUCTION_PRICE}');\n</script>\n</body>\n</html>\n",
+          "adomain": [
+            "example.com"
+          ],
+          "cid": "23501",
+          "crid": "454651",
+          "cat": [
+            "IAB1-1"
+          ],
+          "w": 320,
+          "h": 50,
+          "ext": {
+            "clicktrackers": [
+              "https://test-click.Admize.io/v1/click/1-1663565140182-54-46-2076059"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}
+```
+
+### Video
+```json
+{
+  "id": "7c1f2a9e3b8d4e6fa0b5c2d9e8f71a34",
+  "bidid": "b-7c1f2a9e3b8d-0001",
+  "cur": "USD",
+  "seatbid": [
+    {
+      "seat": "seat-1",
+      "bid": [
+        {
+          "id": "bid-2f6b9c1e-0001",
+          "impid": "2f6b9c1e-4a7d-4c3e-9b8a-5d1e7f2a6c90",
+          "price": 0.5,
+          "nurl": "https://win.dsp.example.com/win?bid=bid-2f6b9c1e-0001&price=${AUCTION_PRICE}",
+          "adm": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<VAST version=\"2.0\">\n  <Ad id=\"ad-5001\">\n    <InLine>\n      <AdSystem version=\"1.0\">Test DSP</AdSystem>\n      <AdTitle>Test Video Ad</AdTitle>\n      <Error><![CDATA[https://track.dsp.example.com/error?bid=bid-2f6b9c1e-0001&code=[ERRORCODE]]]></Error>\n      <Impression><![CDATA[https://track.dsp.example.com/imp?bid=bid-2f6b9c1e-0001&price=${AUCTION_PRICE}]]></Impression>\n      <Impression id=\"admize-impression\"><![CDATA[https://test-event.admize.io/imp/ssp/v1/bid-2f6b9c1e-0001?ap=${AUCTION_PRICE}]]></Impression>\n      <Creatives>\n        <Creative id=\"cr-5001\" sequence=\"1\">\n          <Linear>\n            <Duration>00:00:15</Duration>\n            <TrackingEvents>\n              <Tracking event=\"start\"><![CDATA[https://track.dsp.example.com/event?bid=bid-2f6b9c1e-0001&e=start]]></Tracking>\n              <Tracking event=\"firstQuartile\"><![CDATA[https://track.dsp.example.com/event?bid=bid-2f6b9c1e-0001&e=firstQuartile]]></Tracking>\n              <Tracking event=\"midpoint\"><![CDATA[https://track.dsp.example.com/event?bid=bid-2f6b9c1e-0001&e=midpoint]]></Tracking>\n              <Tracking event=\"thirdQuartile\"><![CDATA[https://track.dsp.example.com/event?bid=bid-2f6b9c1e-0001&e=thirdQuartile]]></Tracking>\n              <Tracking event=\"complete\"><![CDATA[https://track.dsp.example.com/event?bid=bid-2f6b9c1e-0001&e=complete]]></Tracking>\n              <Tracking event=\"close\"><![CDATA[https://track.dsp.example.com/event?bid=bid-2f6b9c1e-0001&e=close]]></Tracking>\n            </TrackingEvents>\n            <VideoClicks>\n              <ClickThrough><![CDATA[https://www.example.com/landing]]></ClickThrough>\n              <ClickTracking><![CDATA[https://track.dsp.example.com/click?bid=bid-2f6b9c1e-0001]]></ClickTracking>\n            </VideoClicks>\n            <MediaFiles>\n              <MediaFile delivery=\"progressive\" type=\"video/mp4\" width=\"320\" height=\"480\" bitrate=\"800\" scalable=\"true\" maintainAspectRatio=\"true\"><![CDATA[https://cdn.dsp.example.com/video/320x480_15s.mp4]]></MediaFile>\n            </MediaFiles>\n          </Linear>\n        </Creative>\n        <Creative id=\"cr-5001-companion\" sequence=\"1\">\n          <CompanionAds>\n            <Companion width=\"320\" height=\"480\">\n              <StaticResource creativeType=\"image/jpeg\"><![CDATA[https://cdn.dsp.example.com/companion/320x480.jpg]]></StaticResource>\n              <CompanionClickThrough><![CDATA[https://www.example.com/landing]]></CompanionClickThrough>\n            </Companion>\n          </CompanionAds>\n        </Creative>\n      </Creatives>\n    </InLine>\n  </Ad>\n</VAST>",
+          "adid": "ad-5001",
+          "adomain": ["example.com"],
+          "cid": "cmp-5001",
+          "crid": "cr-5001",
+          "cat": ["IAB9"],
+          "protocol": 2,
+          "w": 320,
+          "h": 480
+        }
+      ]
+    }
+  ]
+}
+```

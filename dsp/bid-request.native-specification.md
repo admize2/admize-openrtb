@@ -111,3 +111,83 @@ The event trackers object specifies the types of events the bidder can request t
 |----|------|------------------|-------------|
 | 1 | img |  | Image-pixel tracking - URL provided will be inserted as a 1x1 pixel at the time of the event |
 | 2 | js | Not Supported |  |
+
+## Sample
+
+### Native
+```json
+{
+  "id": "1-1790905561416-440422-9581-3193763219",
+  "at": 1,
+  "imp": [
+    {
+      "id": "42c2b018-c007-4457-b35f-2e60c1782dc5",
+      "instl": 0,
+      "bidfloor": 0.1947,
+      "bidfloorcur": "USD",
+      "tagid": "4761011",
+      "secure": 1,
+      "displaymanager": "admize",
+      "displaymanagerver": "1.0.0",
+      "native": {
+        "ver": "1.2",
+        "request": "{\"ver\":\"1.2\",\"assets\":[{\"id\":1,\"required\":1,\"img\":{\"type\":1}},{\"id\":2,\"required\":1,\"img\":{\"type\":3,\"w\":320,\"h\":50}},{\"id\":3,\"required\":1,\"title\":{\"len\":90}},{\"id\":4,\"data\":{\"type\":1}},{\"id\":5,\"data\":{\"type\":2}},{\"id\":6,\"data\":{\"type\":6}},{\"id\":7,\"data\":{\"type\":7}},{\"id\":8,\"required\":1,\"data\":{\"type\":12}}],\"eventtrackers\":[{\"event\":1,\"methods\":[1]}]}"
+      }
+    }
+  ],
+  "tmax": 220,
+  "cur": ["USD"],
+  "badv": ["app.test.com"],
+  "bapp": [],
+  "bcat": ["IAB25-5", "IAB26-4", "IAB9-9", "IAB25-4", "IAB26-3"],
+  "app": {
+    "id": "440422",
+    "name": "kr.co.ating.atingos",
+    "bundle": "kr.co.ating.atingos",
+    "storeurl": "kr.co.ating.atingos",
+    "publisher": {
+      "id": "9bfbbc96-ace0-4cc4-8b6f-3170da3cac26",
+      "name": "admize",
+      "ext": { "sid": 27 }
+    }
+  },
+  "device": {
+    "ua": "Dalvik/2.1.0 (Linux; U; Android 16; SM-F966N Build/BP4A.251205.006)",
+    "ip": "106.101.71.221",
+    "devicetype": 1,
+    "make": "samsung",
+    "model": "SM-F966N",
+    "os": "Android",
+    "osv": "16",
+    "language": "ko",
+    "ifa": "1c047c7e-4763-4b70-92i8-4c60ae75a0zh",
+    "connectiontype": 1,
+    "geo": {
+      "country": "KOR"
+    }
+  },
+  "regs": { "coppa": 0 },
+  "source": {
+    "ext": {
+      "schain": {
+        "ver": "1.0",
+        "complete": 1,
+        "nodes": [
+          {
+            "asi": "cauly.net",
+            "sid": "7130",
+            "rid": "1790905561189363041",
+            "hp": 1
+          },
+          {
+            "asi": "admize.io",
+            "sid": "p_1875135558794156",
+            "rid": "1790905561189363041",
+            "hp": 1
+          }
+        ]
+      }
+    }
+  }
+}
+```

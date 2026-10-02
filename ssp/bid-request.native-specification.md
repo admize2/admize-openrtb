@@ -111,3 +111,86 @@ The event trackers object specifies the types of events the bidder can request t
 |----|------|------------------|-------------|
 | 1 | img |  | Image-pixel tracking - URL provided will be inserted as a 1x1 pixel at the time of the event |
 | 2 | js | Not Supported |  |
+
+
+## Sample
+
+### Native
+```json
+{
+  "id": "4b6436abc2e54e0869e1d39c2ee4c432",
+  "imp": [
+    {
+      "id": "16abc7ca-0f13-4ae1-6a6e-15ffabec0650",
+      "native": {
+        "ver": "1.2",
+        "request": "{\"ver\":\"1.2\",\"plcmttype\":1,\"plcmtcnt\":1,\"seq\":0,\"assets\":[{\"id\":1,\"required\":0,\"data\":{\"type\":12,\"len\":10}},{\"id\":2,\"required\":1,\"title\":{\"len\":10}},{\"id\":3,\"required\":1,\"img\":{\"type\":1,\"w\":80,\"wmin\":0,\"h\":80,\"hmin\":0}},{\"id\":4,\"required\":1,\"img\":{\"type\":3,\"w\":1200,\"wmin\":0,\"h\":627,\"hmin\":0}}]}"
+      },
+      "bidfloor": 0.1,
+      "bidfloorcur": "USD",
+      "tagid": "test-tagid",
+      "instl": 0
+    }
+  ],
+  "app": {
+    "id": "1.5.kr.co.psynet",
+    "name": "LIVE스코어",
+    "bundle": "kr.co.psynet",
+    "storeurl": "https://play.google.com/store/apps/details?id=kr.co.psynet",
+    "publisher": {
+      "id": "538c9315-0a99-45b9-b0ec-785a0ad541e0",
+      "name": "AdmizeSSP"
+    }
+  },
+  "device": {
+    "ifa": "638343a6-e910-4f33-b836-000de74b4c18",
+    "dnt": 0,
+    "ua": "Mozilla/5.0 (Linux; Android 16; SM-S921N Build/BP2A.250605.031.A3; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/153.0.8010.36 Mobile Safari/537.36",
+    "ip": "223.38.21.105",
+    "geo": {
+      "lat": 37.4979,
+      "lon": 127.0276,
+      "country": "KOR",
+      "region": "KR-11",
+      "city": "Seoul",
+      "zip": "06236",
+      "type": 2,
+      "utcoffset": 540
+    },
+    "carrier": "SK Telecom",
+    "mccmnc": "450-05",
+    "language": "ko",
+    "make": "samsung",
+    "model": "SM-S921N",
+    "os": "Android",
+    "osv": "16",
+    "connectiontype": 6,
+    "devicetype": 1,
+    "w": 1080,
+    "h": 2340,
+    "ppi": 416
+  },
+  "user": {"id": "f0fe0536-9d50-5d5d-b28b-fb8ad0e45ac0"},
+  "at": 2,
+  "tmax": 200,
+  "allimps": 0,
+  "cur": ["USD"],
+  "bcat": ["IAB11"],
+  "source": {
+    "ext": {
+      "schain": {
+        "ver": "1.0",
+        "complete": 0,
+        "nodes": [
+          {
+            "asi": "admize.io",
+            "sid": "p_1875135558794156",
+            "hp": 1,
+            "rid": "4b6436abc2e54e0869e1d39c2ee4c432"
+          }
+        ]
+      }
+    }
+  }
+}
+```

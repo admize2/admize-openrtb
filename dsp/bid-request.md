@@ -473,3 +473,175 @@ Segment objects are essentially key-value pairs that convey specific units of da
 | name | string | Optional | - | Name of the data segment specific to the data provider. |
 | value | string | Optional | - | String representation of the data segment value. |
 | ext | object | Optional | - | Placeholder for exchange-specific extensions to OpenRTB. |
+
+## Sample
+
+### Banner
+```json
+{
+  "id": "1-1790905403968-3098-605-3193763921",
+  "at": 2,
+  "imp": [
+    {
+      "id": "320x50",
+      "instl": 0,
+      "bidfloor": 0.25,
+      "bidfloorcur": "USD",
+      "tagid": "7883",
+      "secure": 1,
+      "displaymanager": "admize",
+      "displaymanagerver": "1.0.0",
+      "banner": {
+        "id": "banner",
+        "w": 320,
+        "h": 50
+      }
+    }
+  ],
+  "tmax": 220,
+  "cur": ["USD"],
+  "badv": ["app.bav-test.com"],
+  "bapp": [],
+  "bcat": ["IAB24", "IAB7-5", "IAB3-7", "IAB25-3", "IAB26-2"],
+  "app": {
+    "id": "0001",
+    "name": "com.test.app",
+    "bundle": "com.test.app",
+    "storeurl": "https://play.google.com/store/apps/details?id=com.hellomarket.com.test.app",
+    "publisher": {
+      "id": "545dc211-f880-4385-a67e-ea58e150992f",
+      "name": "admize",
+      "ext": { "sid": 6 }
+    }
+  },
+  "device": {
+    "ua": "Dalvik/2.1.0 (Linux; U; Android 16; SM-S947N Build/BP4A.251205.006)",
+    "ip": "211.234.197.46",
+    "devicetype": 1,
+    "make": "samsung",
+    "model": "SM-S947N",
+    "os": "Android",
+    "osv": "16",
+    "language": "ko",
+    "ifa": "e02e51d9-975d-4976-9e29-775a672dd371",
+    "connectiontype": 1,
+    "geo": {
+      "country": "KOR",
+      "city": "Gwangjin-gu"
+    }
+  },
+  "regs": { "coppa": 0 },
+  "source": {
+    "ext": {
+      "schain": {
+        "ver": "1.0",
+        "complete": 1,
+        "nodes": [
+          {
+            "asi": "cauly.net",
+            "sid": "12405",
+            "rid": "1790905403253383770",
+            "hp": 1
+          },
+          {
+            "asi": "admize.io",
+            "sid": "p_1875135558794156",
+            "rid": "1790905403253383770",
+            "hp": 1
+          }
+        ]
+      }
+    }
+  }
+}
+```
+
+### Video
+```json
+{
+  "id": "1-1790906127770-387656-9270-32559831270",
+  "at": 1,
+  "imp": [
+    {
+      "id": "e5b0372c-a1ba-42c1-9fe8-5b5a113254d1",
+      "instl": 0,
+      "bidfloor": 1.1213,
+      "bidfloorcur": "USD",
+      "tagid": "4760895",
+      "secure": 1,
+      "displaymanager": "admize",
+      "displaymanagerver": "1.0.0",
+      "video": {
+        "mimes": ["video/mp4"],
+        "minduration": 5,
+        "maxduration": 30,
+        "protocols": [2],
+        "w": 240,
+        "h": 320,
+        "startdelay": 0,
+        "linearity": 1,
+        "playbackmethod": [2, 4],
+        "delivery": [2],
+        "companiontype": [1, 2, 3],
+        "placement": 5,
+        "playbackend": 1
+      }
+    }
+  ],
+  "tmax": 220,
+  "cur": ["USD"],
+  "badv": ["app.bav-test.com"],
+  "bapp": [],
+  "bcat": ["IAB26-2", "IAB26-1", "IAB9-9", "IAB25-4",],
+  "app": {
+    "id": "0001",
+    "name": "com.test.app",
+    "bundle": "com.test.app",
+    "storeurl": "https://play.google.com/store/apps/details?id=com.hellomarket.com.test.app",
+    "publisher": {
+      "id": "892e9303-2004-4945-9d26-80eb8b9639cb",
+      "name": "admize",
+      "ext": { "sid": 26 }
+    }
+  },
+  "device": {
+    "ua": "Dalvik/2.1.0 (Linux; U; Android 14; SM-M236L Build/UP1A.231005.007)",
+    "ip": "58.29.178.131",
+    "devicetype": 1,
+    "make": "samsung",
+    "model": "SM-M236L",
+    "os": "Android",
+    "osv": "14",
+    "language": "ko",
+    "ifa": "d598192f-4c84-4d7b-3e40-2a90ii4f480d",
+    "connectiontype": 1,
+    "geo": {
+      "country": "KOR",
+      "city": "-"
+    }
+  },
+  "regs": { "coppa": 0 },
+  "source": {
+    "ext": {
+      "schain": {
+        "ver": "1.0",
+        "complete": 1,
+        "nodes": [
+          {
+            "asi": "cauly.net",
+            "sid": "11197",
+            "rid": "1790906127059967655",
+            "hp": 1
+          },
+          {
+            "asi": "admize.io",
+            "sid": "p_1875135558794156",
+            "rid": "1790906127059967655",
+            "hp": 1
+          }
+        ]
+      }
+    }
+  }
+}
+```
